@@ -1,0 +1,81 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# franklinsFARSPkgJHMSDR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of franklinsFARSPkgJHMSDR is to provide a package which enables users to utilize the FARS processing functions we worked with in week 2 of this course. These functions facilitaty users to easily load data, summarize accident data across mutliple years, and visualize data on a state by state bases. The secondary goal of this package is to help Franklin get a specialization in R software development. 
+
+## Installation
+
+You can install the released version of franklinsFARSPkgJHMSDR from [CRAN](https://CRAN.R-project.org) with: I NEED TO SET THIS TO GITHUB ONCE I HAVE MADE A REPO FOR THIS RPROJ
+
+``` {r }
+# since package not accpeted to cran I think I should rmv this part
+install.packages("franklinsFARSPkgJHMSDR")
+# and replace with github install method
+#install_github("franklinsFARSPkgJHSDR") # or is it a git address?
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r FARSNames}
+library(franklinsFARSPkgJHMSDR)
+print(getwd())
+#setwd(paste(path.package(package = "franklinsFARSPkgJHMSDR"),"/data"))
+# generate the name of a data file. It actually might be easier to not @export this function
+# since the users shouldnt have to use it and it is a helper function to other functions in the 
+#fars_functions.R tool set. 
+print(make_filename("2013"))
+#if the file does not exist / the pkg cannot find it the make_filename fxn will throw an error
+make_filename("2016")
+```
+
+The next step after genearting a file name and checking that it exists, would be to read some FARS data: 
+
+```{r readingFARS}
+#this is how to read in a data set that the user may want to do some analysis on or manipulate in some way. 
+farsDataTibble <- fars_read("accident_2013.csv.bz2")
+# or using the make_Filename functon will do the same thing with less user input
+farsDataTibble <- fars_read(make_filename("2013"))
+print(farsDataTibble)
+
+#aggregating several years worth of FARS data into one data set 
+fars2013to2015 <- fars_read_years(c(2013:2015))
+print(fars2013to2015)
+
+```
+
+There are several years worth of FARS data stored with this package. Its difficult to simply look at several years worth of FARS data in Tibble format and grasp trends that may be present. The `franklinsFARSPkgJHMSDR` package has tools to help the users summarize FARS data across multiple years on a per month basis:
+
+```{r summarizingFARS}
+
+smry2013to2015 <- fars_summarize_years(c(2013:2015))
+print(fars2013to2015)
+
+```
+
+Once you have collected FARS data of interest to you, you may be interested in where the most accidents occur. The fars_map_state plots all of the accidents for a whole year on the map of the state that they happened in. The state is selected numerically (1-50), and the year is selected as an integer 2013, 2014, or 2015. 
+
+You can also embed plots, for example:
+
+```{r visualizeFARS, echo = FALSE}
+fars_map_state(5,2013)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
