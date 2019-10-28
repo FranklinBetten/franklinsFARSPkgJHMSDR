@@ -68,7 +68,7 @@ There are several years worth of FARS data stored with this package. Its difficu
 
 smry2013to2015 <- fars_summarize_years(c(2013:2015))
 print(fars2013to2015)
-
+   
 ```
 
 Once you have collected FARS data of interest to you, you may be interested in where the most accidents occur. The fars_map_state plots all of the accidents for a whole year on the map of the state that they happened in. The state is selected numerically (1-50), and the year is selected as an integer 2013, 2014, or 2015. 
