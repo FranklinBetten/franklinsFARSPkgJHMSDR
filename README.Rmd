@@ -58,7 +58,7 @@ print(farsDataTibble)
 #aggregating several years worth of FARS data into one data set 
 fars2013to2015 <- fars_read_years(c(2013:2015))
 print(fars2013to2015)
-
+  
 ```
 
 There are several years worth of FARS data stored with this package. Its difficult to simply look at several years worth of FARS data in Tibble format and grasp trends that may be present. The `franklinsFARSPkgJHMSDR` package has tools to help the users summarize FARS data across multiple years on a per month basis:
