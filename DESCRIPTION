@@ -3,7 +3,7 @@ Type: Package
 Title: This package provides fxns to read in fars data, summarize fars data, and plot fars data
 Version: 0.1.0
 Author: I am not sure who wrote the functions but I built the package as an assignment
-Maintainer: franklin bettencourt franklinbetten@gmail.com
+Maintainer: franklin bettencourt <franklinbetten@gmail.com>
 Description: This package reads FARS data from CSV files that are shipped with this package. 
     The data is in inst/extdata. There are 3 zipped csv files. There are functions in this pkg
     that aid in ingesting the csv files from csvs into data.frame format, then there are 
