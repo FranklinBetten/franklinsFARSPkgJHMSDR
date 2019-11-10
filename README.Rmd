@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 # franklinsFARSPkgJHMSDR
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/FranklinBetten/franklinsFARSPkgJHMSDR.svg?branch=master)](https://travis-ci.org/FranklinBetten/franklinsFARSPkgJHMSDR)
+[![Travis build status](https://travis-ci.com/FranklinBetten/franklinsFARSPkgJHMSDR.svg?branch=master)](https://travis-ci.com/FranklinBetten/franklinsFARSPkgJHMSDR)
 <!-- badges: end -->
 
 The goal of franklinsFARSPkgJHMSDR is to provide a package which enables users to utilize the FARS processing functions we worked with in week 2 of this course. These functions facilitaty users to easily load data, summarize accident data across mutliple years, and visualize data on a state by state bases. The secondary goal of this package is to help Franklin get a specialization in R software development. 

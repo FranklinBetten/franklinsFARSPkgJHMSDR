@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/FranklinBetten/franklinsFARSPkgJHMSDR.svg?branch=master)](https://travis-ci.org/FranklinBetten/franklinsFARSPkgJHMSDR)
+status](https://travis-ci.com/FranklinBetten/franklinsFARSPkgJHMSDR.svg?branch=master)](https://travis-ci.com/FranklinBetten/franklinsFARSPkgJHMSDR)
 <!-- badges: end -->
 
 The goal of franklinsFARSPkgJHMSDR is to provide a package which enables
